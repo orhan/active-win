@@ -87,6 +87,7 @@ let disableScreenRecordingPermission = CommandLine.arguments.contains("--no-scre
 let enableOpenWindowsList = CommandLine.arguments.contains("--open-windows-list")
 
 // Show accessibility permission prompt if needed. Required to get the complete window title.
+/*
 if !AXIsProcessTrustedWithOptions(["AXTrustedCheckOptionPrompt": true] as CFDictionary) {
 	print("active-win requires the accessibility permission in “System Settings › Privacy & Security › Accessibility”.")
 	exit(1)
@@ -97,6 +98,7 @@ if !disableScreenRecordingPermission && !hasScreenRecordingPermission() {
 	print("active-win requires the screen recording permission in “System Settings › Privacy & Security › Screen Recording”.")
 	exit(1)
 }
+*/
 
 guard
 	let frontmostAppPID = NSWorkspace.shared.frontmostApplication?.processIdentifier,
